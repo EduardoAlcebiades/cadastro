@@ -46,19 +46,22 @@ button {
 }
 
 @media (max-width: 1080px) {
+  //15px
   :root {
     font-size: 93.75%;
   }
 }
 
 @media (max-width: 700px) {
+  //14px
   :root {
     font-size: 89.5%;
   }
 }
 
 @media (max-width: 500px) {
+  //13px
   :root {
-    font-size: 75%;
+    font-size: 81.25%;
   }
 }

@@ -61,12 +61,16 @@
 
     h1 {
       text-align: center;
-
-      max-width: 50%;
     }
 
     button {
       margin-top: 3rem;
+    }
+  }
+
+  @media (min-width: 700px) {
+    main h1 {
+      max-width: 50%;
     }
   }
 }
