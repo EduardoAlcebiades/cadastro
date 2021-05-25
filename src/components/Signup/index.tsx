@@ -13,6 +13,7 @@ import Button from "../Button";
 import Input from "../Input";
 
 import "./styles.scss";
+import { useHistory } from "react-router";
 
 interface Address {
   uf: string;
@@ -36,6 +37,8 @@ interface SignupProps extends React.FormHTMLAttributes<HTMLFormElement> {}
 
 const Signup: React.FC<SignupProps> = ({ className, ...props }) => {
   const { register, handleSubmit, setValue, reset } = useForm<DataForm>();
+  const { push } = useHistory();
+
   const [invalidLabels, setInvalidLabels] = useState<string[]>([]);
 
   const removeInvalidLabel = (list: string[], str: string) => {
@@ -88,7 +91,8 @@ const Signup: React.FC<SignupProps> = ({ className, ...props }) => {
     const { name, cpf, birthday, cep, address } = data;
 
     const currentDate = new Date();
-    const invalid: string[] = invalidLabels;
+    const timestamps = currentDate.getTime();
+    const invalid: string[] = [];
 
     if (!name) invalid.push("name");
     if (!validator.isValid(cpf)) invalid.push("cpf");
@@ -115,10 +119,10 @@ const Signup: React.FC<SignupProps> = ({ className, ...props }) => {
       },
     };
 
-    localStorage.setItem(`user-${currentDate.getTime()}`, JSON.stringify(form));
+    localStorage.setItem(`user-${timestamps}`, JSON.stringify(form));
 
     reset();
-    alert("Dados salvos com sucesso!");
+    push(`/success/t/${timestamps}`);
   };
 
   return (

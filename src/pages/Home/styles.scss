@@ -1,0 +1,62 @@
+div.homeContainer {
+    display: flex;
+    flex-direction: column;
+  
+    height: 100%;
+  
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      height: 15rem;
+  
+      padding: 2rem;
+  
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: var(--background);
+  
+      h1,
+      p {
+        width: 100%;
+      }
+  
+      p {
+        line-height: 1.5rem;
+        font-size: 1.05rem;
+      }
+    }
+  
+    @media (min-width: 720px) {
+      flex-direction: row;
+  
+      header {
+        flex: 1;
+  
+        max-width: 55vw;
+        height: 100%;
+  
+        padding: 0;
+  
+        h1,
+        p {
+          width: fit-content;
+  
+          margin: 0 4rem;
+        }
+  
+        h1 {
+          font-size: 2.5rem;
+        }
+  
+        overflow: auto;
+      }
+  
+      main {
+        flex: 1;
+  
+        min-width: fit-content;
+      }
+    }
+  }
+  

@@ -1,14 +1,9 @@
 import "./global/GlobalStyles.scss";
 
-import Main from "./components/Main";
-import Signup from "./components/Signup";
+import Routes from "./routes";
 
 function App() {
-  return (
-    <Main>
-      <Signup />
-    </Main>
-  );
+  return <Routes />;
 }
 
 export default App;

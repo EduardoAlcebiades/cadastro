@@ -1,0 +1,72 @@
+.successContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  padding: 2rem;
+
+  background: linear-gradient(
+    to right bottom,
+    var(--primary),
+    var(--primary-dark)
+  );
+
+  color: #ffffff;
+
+  button {
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem;
+
+    transition: all 0.2s;
+
+    border: none;
+    border-radius: 0.2rem;
+    background: none;
+
+    &:hover {
+      background: #00000020;
+    }
+
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    padding: 1rem;
+
+    opacity: 0;
+    overflow: auto;
+
+    transition: opacity 0.2s ease-in;
+
+    svg {
+      font-size: 6rem;
+    }
+
+    h1 {
+      text-align: center;
+
+      max-width: 50%;
+    }
+
+    button {
+      margin-top: 3rem;
+    }
+  }
+}
