@@ -1,0 +1,46 @@
+:root {
+  --primary: #34cb91;
+  --primary-dark: #34cb79;
+  --text: #6c6c80;
+  --background: #f0f0f5;
+  --danger: #f51c4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+
+  background: var(--background);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+body,
+button,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+}

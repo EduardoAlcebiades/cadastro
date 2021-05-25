@@ -1,0 +1,40 @@
+button.buttonContainer {
+  display: flex;
+
+  background: var(--primary);
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+
+  border: 0;
+  border-radius: 0.2rem;
+
+  transition: all 0.2s;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 0.7rem;
+
+    &.icon {
+      background: #00000025;
+
+      svg {
+        font-size: 1.3rem;
+      }
+    }
+
+    &.content {
+      flex: 1;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
